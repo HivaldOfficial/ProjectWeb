@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth scroll-pt-28">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charoline AutoWrap - Premium Auto Styling</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Poppins", "sans-serif"] },
+            colors: {
+              brand: { red: "#dc2626", dark: "#0f172a", gray: "#334155" },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans antialiased bg-[#111111] text-gray-800 flex flex-col min-h-screen">
+    <nav class="fixed top-0 w-full z-50 px-6 lg:px-20 py-6 text-white bg-brand-dark/95 backdrop-blur-sm border-b border-gray-800">
+      <div class="flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2"> <i class="fa-solid fa-car-side text-brand-red"></i> Charoline<span class="text-brand-red">AutoWrap</span> </a>
+
+        <div class="hidden md:flex space-x-8 text-sm font-semibold">
+          <a href="#" data-target="beranda" class="nav-link text-brand-red transition cursor-pointer">Beranda</a>
+          <a href="#" data-target="layanan" class="nav-link hover:text-brand-red transition cursor-pointer">Layanan</a>
+        </div>
+
+        <a href="#" data-target="contact" class="nav-link-trigger hidden md:inline-block border border-white hover:bg-white hover:text-brand-dark px-6 py-2 rounded-full text-sm font-semibold transition"> Hubungi Kami </a>
+
+        <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-brand-dark flex flex-col text-center shadow-lg border-t border-gray-700">
+        <a href="#" data-target="beranda" class="nav-link-mobile block py-4 text-brand-red font-semibold border-b border-gray-800">Beranda</a>
+        <a href="#" data-target="layanan" class="nav-link-mobile block py-4 text-white hover:text-brand-red font-semibold border-b border-gray-800">Layanan</a>
+        <a href="#" data-target="contact" class="nav-link-mobile block py-4 text-white hover:text-brand-red font-semibold border-b border-gray-800">Kontak Kami</a>
+      </div>
+    </nav>
+
+    <main id="main-content" class="flex-grow pt-20 bg-gray-50">
+      <!-- ================= HALAMAN: BERANDA ================= -->
+      <section id="page-beranda" class="page-section">
+        <div class="relative bg-brand-dark min-h-[90vh] flex items-center px-6 lg:px-20 overflow-hidden border-b-4 border-brand-red">
+          <div class="absolute inset-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover object-right" />
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent"></div>
+          </div>
+          <div class="relative z-10 max-w-2xl mt-10">
+            <span class="text-brand-red font-semibold tracking-wider uppercase text-sm mb-4 block">Premium Auto Styling</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">Ubah Tampilan <br />Kendaraan Anda.</h1>
+            <p class="text-gray-300 text-lg mb-8 leading-relaxed">Spesialis pemasangan stiker mobil dan Paint Protection Film (PPF) dengan material premium dan garansi pengerjaan.</p>
+            <div class="flex gap-4">
+              <a href="#" data-target="layanan" class="nav-link-trigger bg-brand-red hover:bg-red-700 text-white px-6 py-3 md:px-8 rounded shadow-lg transition font-semibold text-sm md:text-base"> Lihat Layanan </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#111111] text-white py-20 px-6 lg:px-20 flex flex-col items-center text-center">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-8">Welcome to Charoline AutoWrap Jakarta</h2>
+          <p class="text-gray-300 max-w-4xl leading-relaxed text-sm md:text-base mb-6">
+            Charoline AutoWrap adalah Penyedia Jasa Wrapping Sticker Mobil di Jakarta. Kami berpengalaman lebih dari 5 tahun dalam bidang wrapping sticker dan telah dipercaya oleh banyak pelanggan. Untuk memberikan layanan terbaik, kami
+            juga memberikan layanan pemasangan sticker langsung di lokasi anda dan pembayaran langsung setelah pekerjaan selesai.
+          </p>
+          <p class="text-gray-300 text-sm md:text-base mb-10">Hubungi kami untuk mendapatkan layanan wrapping sticker untuk kendaraan anda. (Buka 24 Jam)</p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="bg-[#25D366] hover:bg-green-600 text-white font-semibold py-3 px-8 rounded flex items-center gap-2 transition duration-300">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Chat Us on WA
+          </a>
+        </div>
+      </section>
+
+      <!-- ================= HALAMAN: LAYANAN ================= -->
+      <section id="page-layanan" class="page-section hidden">
+        <div class="bg-brand-dark pt-20 pb-12 px-6 lg:px-20 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Layanan Unggulan Kami</h1>
+          <div class="w-24 h-1 bg-brand-red mx-auto rounded-full"></div>
+        </div>
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-screen">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+            <a href="#" data-target="detail-ppf" class="nav-link-trigger block group rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div class="h-48 overflow-hidden relative">
+                <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-red transition">Paint Protection Film (PPF)</h3>
+                <p class="text-gray-600 text-sm">Lapisan transparan tebal untuk melindungi cat dari goresan, kerikil, dan noda aspal jalanan.</p>
+              </div>
+            </a>
+            <a href="#" data-target="detail-wrapping" class="nav-link-trigger block group rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div class="h-48 overflow-hidden relative">
+                <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-red transition">Full Body Wrapping</h3>
+                <p class="text-gray-600 text-sm">Ubah warna mobil Anda sepenuhnya dengan stiker vinyl premium tanpa merusak cat asli.</p>
+              </div>
+            </a>
+            <a href="#" data-target="detail-decal" class="nav-link-trigger block group rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+              <div class="h-48 overflow-hidden relative">
+                <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-red transition">Decal & Branding</h3>
+                <p class="text-gray-600 text-sm">Desain kustom untuk kebutuhan balap, komunitas, atau branding kendaraan perusahaan Anda.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HALAMAN DETAIL: PPF ================= -->
+      <section id="page-detail-ppf" class="page-section hidden">
+        <div class="relative bg-brand-dark pt-32 pb-24 px-6 lg:px-20 text-center overflow-hidden">
+          <div class="absolute inset-0 opacity-40">
+            <img src="bocay.jpeg" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
+          </div>
+          <h1 class="text-3xl md:text-5xl font-bold text-white relative z-10 mb-4">Paint Protection Film (PPF)</h1>
+        </div>
+
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-screen">
+          <div class="max-w-4xl mx-auto">
+            <a href="#" data-target="layanan" class="nav-link-trigger inline-flex items-center text-brand-red font-semibold mb-8 hover:underline"> <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Layanan </a>
+
+            <div class="text-gray-700 leading-relaxed text-lg mb-16">
+              <p class="mb-6">
+                Punya mobil kinclong itu rasanya kayak punya sepatu baru: seneng banget... sampai akhirnya kena lecet dikit, langsung nyesek. Nah, kalau Kamu termasuk tipe yang sayang banget sama tampilan mobil,
+                <strong class="text-brand-red">Paint Protection Film (PPF)</strong> bisa jadi penyelamat yang selama ini Kamu cari.<br /><br />Di Jakarta yang lalu lintasnya padat, risiko cat mobil baret itu bukan “kalau”, tapi “kapan”.
+                Entah kena batu kecil, gesekan motor, atau parkir mepet ala-ala ninja. Makanya, sekarang makin banyak pemilik mobil yang mulai sadar pentingnya perlindungan ekstra buat cat mobil mereka.
+              </p>
+
+              <!-- DAFTAR ISI -->
+              <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8 shadow-sm">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-200 pb-3 cursor-pointer toc-toggle" data-target="toc-list-ppf">
+                  <h3 class="font-bold text-xl text-brand-dark">Daftar Isi</h3>
+                  <button class="focus:outline-none"><i class="fa-solid fa-list text-gray-400 text-xl hover:text-brand-red transition"></i></button>
+                </div>
+                <ul id="toc-list-ppf" class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-sm text-gray-600 transition-all">
+                  <li><a href="#ppf-1" class="hover:text-brand-red hover:underline transition">1. Charoline AutoWrap Layanan Profesional PPF Lebih dari 14 Tahun Melayani</a></li>
+                  <li><a href="#ppf-2" class="hover:text-brand-red hover:underline transition">2. Apa Itu PPF?</a></li>
+                  <li><a href="#porto-ppf" class="hover:text-brand-red hover:underline transition">3. Portofolio Kami</a></li>
+                </ul>
+              </div>
+
+              <div id="ppf-1" class="mt-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">Charoline AutoWrap Layanan Profesional PPF Lebih dari 14 Tahun Melayani</h2>
+                <p class="mb-4">
+                  Kalau ngomongin jasa PPF Jakarta, pengalaman itu bukan sekadar angka, tapi soal hasil. <a href="#" class="text-blue-600 hover:underline">Charoline AutoWrap</a> sudah lebih dari 14 tahun melayani berbagai kebutuhan proteksi
+                  kendaraan, dari mobil harian sampai mobil hobi yang super dijaga. <br /><br />Selama bertahun-tahun, mereka sudah menangani berbagai jenis mobil dengan karakter cat yang berbeda-beda. Jadi bukan sekadar “nempel film”, tapi
+                  benar-benar paham teknik pemasangan yang presisi dan aman.<br /><br />Yang bikin beda, pendekatan mereka itu nggak kaku. Kamu bisa konsultasi santai, tanya-tanya dulu tanpa langsung disuruh deal. Jadi nggak ada tuh cerita
+                  datang cuma mau nanya, tapi pulang-pulang malah bawa invoice.
+                </p>
+              </div>
+
+              <div id="ppf-2" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-8">Apa Itu PPF?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <!-- UBAH SRC INI DENGAN NAMA FILE GAMBAR ANDA -->
+                  <img src="bocay.jpeg" class="w-full h-auto rounded-lg shadow-md" alt="Apa itu PPF" />
+
+                  <div class="text-gray-800 space-y-4 text-base">
+                    <p>
+                      Paint Protection Film atau PPF adalah lapisan film transparan yang dipasang di permukaan cat mobil untuk melindungi dari berbagai risiko kerusakan ringan.<br /><br />Bayangin aja kayak screen protector di HP Kamu, tapi
+                      versi upgrade yang jauh lebih canggih. PPF ini dirancang untuk menyerap benturan ringan, melindungi dari goresan, bahkan beberapa jenis PPF punya fitur self-healing alias bisa “menyembuhkan” goresan halus dengan
+                      sendirinya.<br /><br />Jadi kalau ada baret tipis, nggak perlu panik dulu. Kadang cukup kena panas matahari atau air hangat, goresannya bisa memudar.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= PORTOFOLIO KAMI (PPF) ================= -->
+            <div id="porto-ppf" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+              <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Portofolio Kami</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
+                  Berikut beberapa hasil pemasangan Jasa Paint Protection Film by Charoline AutoWrap yang telah dipercaya ribuan pelanggan. Terima kasih atas kepercayaannya kepada kami.
+                </p>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <!-- UBAH SRC INI DENGAN FILE GAMBAR PORTOFOLIO ANDA -->
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=600&auto=format&fit=crop" alt="Porto 1" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1611018903512-4c28c8646b5d?q=80&w=600&auto=format&fit=crop" alt="Porto 2" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1600869688402-9a5d3f2ec222?q=80&w=600&auto=format&fit=crop" alt="Porto 3" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=600&auto=format&fit=crop" alt="Porto 4" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=600&auto=format&fit=crop" alt="Porto 5" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600&auto=format&fit=crop" alt="Porto 6" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+              </div>
+            </div>
+
+            <div class="mt-16 bg-[#FCE588] p-10 text-center rounded-sm">
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Order/Konsultasi Gratis</h3>
+              <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Kamu mau mobil kesayangan lebih keren dan juga aman dari lecet. Bisa pilih Wrapping Sticker atau PPF. Yuk konsultasikan dengan kami. Gratis!.</p>
+              <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-green-700 text-white font-semibold py-3 px-6 md:px-8 rounded transition">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Mau Konsultasi PPF, WA Aja?
+              </a>
+            </div>
+
+            <div class="mt-16 border-t border-gray-200 pt-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-6">Profil Penulis</h3>
+              <div class="flex flex-col md:flex-row items-start gap-6">
+                <!-- GANTI SRC INI DENGAN NAMA FILE LOGO TOKO ANDA -->
+                <img src="bocay.jpeg" alt="Charoline AutoWrap Logo" class="w-24 h-24 shrink-0 rounded-full object-cover border-4 border-[#d4af37] shadow-md" />
+                <div>
+                  <h4 class="text-xl font-bold text-[#0073AA] mb-2 hover:underline cursor-pointer">Charoline AutoWrap</h4>
+                  <p class="text-gray-600 text-sm md:text-base mb-4">Charoline AutoWrap adalah layanan profesional Wrapping Sticker Mobil & PPF (Paint Protection Film) yang telah dipercaya ribuan pelanggan.</p>
+                  <div class="flex gap-4 text-[#0073AA] text-xl">
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pos Sebelumnya / Selanjutnya -->
+            <div class="flex justify-between items-center border-t border-b border-gray-200 py-6 mt-12 text-sm md:text-base">
+              <a href="#" data-target="detail-decal" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">&larr; Decal & Branding</a>
+              <a href="#" data-target="detail-wrapping" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">Full Body Wrapping &rarr;</a>
+            </div>
+
+            <!-- Daftar Layanan -->
+            <div class="mt-16 mb-10">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-8">Daftar Layanan Kami</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" data-target="detail-ppf" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Paint Protection Film (PPF)</h4></div>
+                </a>
+                <a href="#" data-target="detail-wrapping" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Full Body Wrapping</h4></div>
+                </a>
+                <a href="#" data-target="detail-decal" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Decal & Branding</h4></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HALAMAN DETAIL: FULL BODY WRAPPING ================= -->
+      <section id="page-detail-wrapping" class="page-section hidden">
+        <div class="relative bg-brand-dark pt-32 pb-24 px-6 lg:px-20 text-center overflow-hidden">
+          <div class="absolute inset-0 opacity-40">
+            <img src="bocay.jpeg" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
+          </div>
+          <h1 class="text-3xl md:text-5xl font-bold text-white relative z-10 mb-4">Full Body Wrapping</h1>
+        </div>
+
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-screen">
+          <div class="max-w-4xl mx-auto">
+            <a href="#" data-target="layanan" class="nav-link-trigger inline-flex items-center text-brand-red font-semibold mb-8 hover:underline"> <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Layanan </a>
+
+            <div class="text-gray-700 leading-relaxed text-lg mb-16">
+              <p class="mb-6">
+                Bosan dengan warna mobil yang itu-itu saja? Atau ingin mengubah gaya secara ekstrem namun tetap ingin melindungi cat orisinal pabrik? <strong class="text-brand-red">Full Body Wrapping</strong> adalah solusi instan yang
+                sempurna untuk Anda.
+              </p>
+
+              <!-- DAFTAR ISI -->
+              <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8 shadow-sm">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-200 pb-3 cursor-pointer toc-toggle" data-target="toc-list-wrap">
+                  <h3 class="font-bold text-xl text-brand-dark">Daftar Isi</h3>
+                  <button class="focus:outline-none"><i class="fa-solid fa-list text-gray-400 text-xl hover:text-brand-red transition"></i></button>
+                </div>
+                <ul id="toc-list-wrap" class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-sm text-gray-600 transition-all">
+                  <li><a href="#wrap-1" class="hover:text-brand-red hover:underline transition">1. Ubah Gaya Tanpa Merusak Cat Asli</a></li>
+                  <li><a href="#wrap-2" class="hover:text-brand-red hover:underline transition">2. Apa Itu Full Body Wrapping?</a></li>
+                  <li><a href="#porto-wrap" class="hover:text-brand-red hover:underline transition">3. Portofolio Kami</a></li>
+                </ul>
+              </div>
+
+              <div id="wrap-1" class="mt-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">Ubah Gaya Tanpa Merusak Cat Asli</h2>
+                <p class="mb-4">
+                  Mengganti warna mobil dengan cara dicat ulang akan menurunkan nilai jual kendaraan Anda secara drastis. Dengan material premium dari <a href="#" class="text-blue-600 hover:underline">Charoline AutoWrap</a>, proses wrapping
+                  tidak hanya memukau secara visual, tapi juga tidak meninggalkan bekas lem membandel ketika kelak Anda ingin mencopotnya.
+                </p>
+              </div>
+
+              <div id="wrap-2" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-8">Apa Itu Full Body Wrapping?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <!-- UBAH SRC INI DENGAN NAMA FILE GAMBAR ANDA -->
+                  <img src="bocay.jpeg" class="w-full h-auto rounded-lg shadow-md" alt="Full Body Wrapping" />
+
+                  <div class="text-gray-800 space-y-4 text-base">
+                    <p>Full Body Wrapping adalah teknik melapisi keseluruhan bodi luar mobil menggunakan stiker khusus (vinyl) yang didesain khusus untuk otomotif.</p>
+                    <p>
+                      Dengan *wrapping*, Anda bisa memilih berbagai macam *finishing* warna yang tidak bisa didapatkan dari cat standar pabrik, mulai dari Matte (Doff), Satin, Glossy yang super mengkilap, hingga tekstur karbon yang
+                      *sporty*.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= PORTOFOLIO KAMI (WRAPPING) ================= -->
+            <div id="porto-wrap" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+              <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Portofolio Kami</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
+                  Berikut beberapa hasil pemasangan Jasa Full Body Wrapping by Charoline AutoWrap yang telah dipercaya ribuan pelanggan. Terima kasih atas kepercayaannya kepada kami.
+                </p>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <!-- UBAH SRC INI DENGAN FILE GAMBAR PORTOFOLIO ANDA -->
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=600&auto=format&fit=crop" alt="Porto 1" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1611018903512-4c28c8646b5d?q=80&w=600&auto=format&fit=crop" alt="Porto 2" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1600869688402-9a5d3f2ec222?q=80&w=600&auto=format&fit=crop" alt="Porto 3" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=600&auto=format&fit=crop" alt="Porto 4" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=600&auto=format&fit=crop" alt="Porto 5" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600&auto=format&fit=crop" alt="Porto 6" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+              </div>
+            </div>
+
+            <div class="mt-16 bg-[#FCE588] p-10 text-center rounded-sm">
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Order/Konsultasi Gratis</h3>
+              <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Ingin ganti warna mobil? Yuk konsultasikan konsep warna dan biaya dengan tim kami. Gratis!</p>
+              <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-green-700 text-white font-semibold py-3 px-6 md:px-8 rounded transition">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Mau Konsultasi Wrapping, WA Aja?
+              </a>
+            </div>
+
+            <div class="mt-16 border-t border-gray-200 pt-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-6">Profil Penulis</h3>
+              <div class="flex flex-col md:flex-row items-start gap-6">
+                <!-- GANTI SRC INI DENGAN NAMA FILE LOGO TOKO ANDA -->
+                <img src="bocay.jpeg" alt="Charoline AutoWrap Logo" class="w-24 h-24 shrink-0 rounded-full object-cover border-4 border-[#d4af37] shadow-md" />
+                <div>
+                  <h4 class="text-xl font-bold text-[#0073AA] mb-2 hover:underline cursor-pointer">Charoline AutoWrap</h4>
+                  <p class="text-gray-600 text-sm md:text-base mb-4">Charoline AutoWrap adalah layanan profesional Wrapping Sticker Mobil & PPF (Paint Protection Film) yang telah dipercaya ribuan pelanggan.</p>
+                  <div class="flex gap-4 text-[#0073AA] text-xl">
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pos Sebelumnya / Selanjutnya -->
+            <div class="flex justify-between items-center border-t border-b border-gray-200 py-6 mt-12 text-sm md:text-base">
+              <a href="#" data-target="detail-ppf" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">&larr; Paint Protection Film</a>
+              <a href="#" data-target="detail-decal" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">Decal & Branding &rarr;</a>
+            </div>
+
+            <!-- Daftar Layanan -->
+            <div class="mt-16 mb-10">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-8">Daftar Layanan Kami</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" data-target="detail-ppf" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Paint Protection Film (PPF)</h4></div>
+                </a>
+                <a href="#" data-target="detail-wrapping" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Full Body Wrapping</h4></div>
+                </a>
+                <a href="#" data-target="detail-decal" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Decal & Branding</h4></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HALAMAN DETAIL: DECAL & BRANDING ================= -->
+      <section id="page-detail-decal" class="page-section hidden">
+        <div class="relative bg-brand-dark pt-32 pb-24 px-6 lg:px-20 text-center overflow-hidden">
+          <div class="absolute inset-0 opacity-40">
+            <img src="bocay.jpeg" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent"></div>
+          </div>
+          <h1 class="text-3xl md:text-5xl font-bold text-white relative z-10 mb-4">Decal & Branding Kendaraan</h1>
+        </div>
+
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-screen">
+          <div class="max-w-4xl mx-auto">
+            <a href="#" data-target="layanan" class="nav-link-trigger inline-flex items-center text-brand-red font-semibold mb-8 hover:underline"> <i class="fa-solid fa-arrow-left mr-2"></i> Kembali ke Layanan </a>
+
+            <div class="text-gray-700 leading-relaxed text-lg mb-16">
+              <p class="mb-6">
+                Jadikan armada kendaraan perusahaan Anda sebagai media promosi yang bekerja aktif siang dan malam. Melalui <strong class="text-brand-red">Decal & Branding</strong>, identitas visual perusahaan akan melekat kuat di ingatan
+                setiap orang yang melihatnya di jalan.
+              </p>
+
+              <!-- DAFTAR ISI -->
+              <div class="bg-gray-50 border border-gray-200 p-6 rounded-lg mb-8 shadow-sm">
+                <div class="flex items-center justify-between mb-4 border-b border-gray-200 pb-3 cursor-pointer toc-toggle" data-target="toc-list-decal">
+                  <h3 class="font-bold text-xl text-brand-dark">Daftar Isi</h3>
+                  <button class="focus:outline-none"><i class="fa-solid fa-list text-gray-400 text-xl hover:text-brand-red transition"></i></button>
+                </div>
+                <ul id="toc-list-decal" class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 text-sm text-gray-600 transition-all">
+                  <li><a href="#decal-1" class="hover:text-brand-red hover:underline transition">1. Solusi Promosi Berjalan Paling Efisien</a></li>
+                  <li><a href="#decal-2" class="hover:text-brand-red hover:underline transition">2. Apa Itu Decal Branding?</a></li>
+                  <li><a href="#porto-decal" class="hover:text-brand-red hover:underline transition">3. Portofolio Kami</a></li>
+                </ul>
+              </div>
+
+              <div id="decal-1" class="mt-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-6">Solusi Promosi Berjalan Paling Efisien</h2>
+                <p class="mb-4">
+                  Tidak ada baliho atau *billboard* yang lebih dinamis dibandingkan dengan armada mobil perusahaan yang berkeliling kota setiap harinya. Tim profesional
+                  <a href="#" class="text-blue-600 hover:underline">Charoline AutoWrap</a> menggunakan teknik *printing* presisi pada stiker khusus untuk memastikan logo dan informasi perusahaan Anda tercetak tajam dan tahan lama melawan
+                  cuaca ekstrem.
+                </p>
+              </div>
+
+              <div id="decal-2" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-8">Apa Itu Decal Branding?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  <!-- UBAH SRC INI DENGAN NAMA FILE GAMBAR ANDA -->
+                  <img src="bocay.jpeg" class="w-full h-auto rounded-lg shadow-md" alt="Decal Branding" />
+
+                  <div class="text-gray-800 space-y-4 text-base">
+                    <p>Decal Branding adalah penerapan stiker kustom cetak grafis (baik sebagian panel maupun menutupi bodi penuh) yang dirancang khusus sesuai identitas merek Anda.</p>
+                    <p>Layanan ini sangat cocok untuk mobil boks, pick-up, mobil operasional kantor, travel, hingga komunitas balap (*livery* sport) yang menginginkan grafis dinamis dan unik.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= PORTOFOLIO KAMI (DECAL) ================= -->
+            <div id="porto-decal" class="mt-16 bg-[#F4EEB8] p-6 md:p-10 rounded-xl shadow-inner">
+              <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Portofolio Kami</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
+                  Berikut beberapa hasil pemasangan Jasa Decal & Branding by Charoline AutoWrap yang telah dipercaya ribuan pelanggan. Terima kasih atas kepercayaannya kepada kami.
+                </p>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <!-- UBAH SRC INI DENGAN FILE GAMBAR PORTOFOLIO ANDA -->
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?q=80&w=600&auto=format&fit=crop" alt="Porto 1" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="bocay.jpeg" alt="Porto 2" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="bocay.jpeg" alt="Porto 3" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?q=80&w=600&auto=format&fit=crop" alt="Porto 4" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=600&auto=format&fit=crop" alt="Porto 5" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=600&auto=format&fit=crop" alt="Porto 6" class="w-full h-32 md:h-56 object-cover rounded-md shadow-sm border border-gray-200" />
+              </div>
+            </div>
+
+            <div class="mt-16 bg-[#FCE588] p-10 text-center rounded-sm">
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Order/Konsultasi Gratis</h3>
+              <p class="text-gray-700 mb-8 max-w-2xl mx-auto">Punya armada yang ingin di-branding agar terlihat lebih profesional? Yuk konsultasikan dengan kami. Gratis!</p>
+              <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-2 bg-[#128C7E] hover:bg-green-700 text-white font-semibold py-3 px-6 md:px-8 rounded transition">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Mau Konsultasi Decal, WA Aja?
+              </a>
+            </div>
+
+            <div class="mt-16 border-t border-gray-200 pt-10">
+              <h3 class="text-xl font-semibold text-gray-800 mb-6">Profil Penulis</h3>
+              <div class="flex flex-col md:flex-row items-start gap-6">
+                <!-- GANTI SRC INI DENGAN NAMA FILE LOGO TOKO ANDA -->
+                <img src="bocay.jpeg" alt="Charoline AutoWrap Logo" class="w-24 h-24 shrink-0 rounded-full object-cover border-4 border-[#d4af37] shadow-md" />
+                <div>
+                  <h4 class="text-xl font-bold text-[#0073AA] mb-2 hover:underline cursor-pointer">Charoline AutoWrap</h4>
+                  <p class="text-gray-600 text-sm md:text-base mb-4">Charoline AutoWrap adalah layanan profesional Wrapping Sticker Mobil & PPF (Paint Protection Film) yang telah dipercaya ribuan pelanggan.</p>
+                  <div class="flex gap-4 text-[#0073AA] text-xl">
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-blue-800"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pos Sebelumnya / Selanjutnya -->
+            <div class="flex justify-between items-center border-t border-b border-gray-200 py-6 mt-12 text-sm md:text-base">
+              <a href="#" data-target="detail-wrapping" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">&larr; Full Body Wrapping</a>
+              <a href="#" data-target="detail-ppf" class="nav-link-trigger text-[#0073AA] hover:underline font-semibold">Paint Protection Film &rarr;</a>
+            </div>
+
+            <!-- Daftar Layanan -->
+            <div class="mt-16 mb-10">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-8">Daftar Layanan Kami</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" data-target="detail-ppf" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Paint Protection Film (PPF)</h4></div>
+                </a>
+                <a href="#" data-target="detail-wrapping" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Full Body Wrapping</h4></div>
+                </a>
+                <a href="#" data-target="detail-decal" class="nav-link-trigger block group rounded-xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                  <div class="h-40 overflow-hidden relative">
+                    <img src="bocay.jpeg" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                  </div>
+                  <div class="p-4"><h4 class="font-bold text-gray-800 mb-1 group-hover:text-brand-red transition text-sm">Decal & Branding</h4></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= HALAMAN: KONTAK KAMI ================= -->
+      <section id="page-contact" class="page-section hidden">
+        <div class="bg-brand-dark pt-20 pb-12 px-6 lg:px-20 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Hubungi Kami</h1>
+          <div class="w-24 h-1 bg-brand-red mx-auto rounded-full"></div>
+        </div>
+
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-[60vh]">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div class="bg-gray-50 p-8 md:p-12 rounded-2xl border border-gray-100 shadow-sm">
+              <h2 class="text-2xl font-bold text-brand-dark mb-6">Mari Berdiskusi!</h2>
+              <p class="text-gray-600 mb-10 leading-relaxed">
+                Punya pertanyaan atau ingin berkonsultasi mengenai wrapping sticker dan PPF untuk mobil kesayanganmu? Jangan ragu untuk mengunjungi workshop kami atau hubungi kami secara langsung.
+              </p>
+
+              <div class="space-y-8">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full text-brand-red text-xl shrink-0 shadow-sm border border-gray-100"><i class="fa-solid fa-location-dot"></i></div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-1">Alamat Workshop</h4>
+                    <p class="text-gray-600">Pasar Cipete Blok AKS No. 62<br />Jakarta Selatan</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full text-brand-red text-xl shrink-0 shadow-sm border border-gray-100"><i class="fa-brands fa-whatsapp"></i></div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-1">WhatsApp (24 Jam)</h4>
+                    <p class="text-gray-600">
+                      <a href="https://wa.me/6281234567890" target="_blank" class="hover:text-brand-red font-semibold transition">+62 812-3456-7890</a>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full text-brand-red text-xl shrink-0 shadow-sm border border-gray-100"><i class="fa-solid fa-phone"></i></div>
+                  <div>
+                    <h4 class="font-bold text-gray-800 text-lg mb-1">Telepon</h4>
+                    <p class="text-gray-600">
+                      <a href="tel:+6281234567890" class="hover:text-brand-red font-semibold transition">+62 812-3456-7890</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="h-full min-h-[400px] rounded-2xl overflow-hidden shadow-md border border-gray-200">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0125433604313!2d106.79724107499066!3d-6.262078693726581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1a206b09c8b%3A0xc34e1845b9a02ea4!2sPasar%20Cipete%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PRIVACY POLICY ================= -->
+      <section id="page-privacy" class="page-section hidden">
+        <div class="bg-brand-dark pt-20 pb-12 px-6 lg:px-20 text-center">
+          <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Kebijakan Privasi</h1>
+          <div class="w-24 h-1 bg-brand-red mx-auto rounded-full"></div>
+        </div>
+
+        <div class="py-16 px-6 lg:px-20 bg-white min-h-[60vh]">
+          <div class="max-w-4xl mx-auto text-gray-700 leading-relaxed space-y-6">
+            <p>Selamat datang di <strong>Charoline AutoWrap</strong>. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat Anda mengunjungi situs web kami.</p>
+
+            <h3 class="text-xl font-bold text-brand-dark mt-8">1. Informasi yang Kami Kumpulkan</h3>
+            <p>Kami hanya mengumpulkan informasi yang Anda berikan secara sukarela saat menghubungi kami melalui WhatsApp atau formulir kontak, seperti nama, nomor telepon, dan detail kendaraan (jika diperlukan untuk estimasi harga).</p>
+
+            <h3 class="text-xl font-bold text-brand-dark mt-8">2. Penggunaan Informasi</h3>
+            <p>Informasi yang kami kumpulkan digunakan semata-mata untuk:</p>
+            <ul class="list-disc list-inside ml-4 space-y-2 text-gray-600">
+              <li>Merespons pertanyaan, keluhan, dan permintaan layanan Anda.</li>
+              <li>Memberikan estimasi harga dan jadwal pengerjaan (*booking*).</li>
+              <li>Meningkatkan kualitas layanan pelanggan kami.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-brand-dark mt-8">3. Perlindungan Data</h3>
+            <p>
+              Kami berkomitmen untuk menjaga kerahasiaan data Anda. Kami tidak akan menjual, menyewakan, atau membagikan informasi pribadi Anda (terutama nomor WhatsApp) kepada pihak ketiga untuk tujuan pemasaran tanpa persetujuan Anda.
+            </p>
+
+            <h3 class="text-xl font-bold text-brand-dark mt-8">4. Perubahan Kebijakan</h3>
+            <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu menyesuaikan dengan layanan kami. Perubahan akan berlaku segera setelah diposting di halaman ini.</p>
+
+            <p class="mt-12 text-sm text-gray-500 font-semibold border-t border-gray-200 pt-6">Terakhir diperbarui: Juni 2026</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-[#0a0a0a] text-white pt-16 pb-8 px-6 lg:px-20 mt-auto border-t-4 border-brand-red">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12 mb-8">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+          <a href="#" class="text-3xl font-bold tracking-tighter flex items-center gap-2 mb-4"><i class="fa-solid fa-car-side text-brand-red"></i> Charoline<span class="text-brand-red">AutoWrap</span></a>
+          <p class="text-sm text-gray-400 leading-relaxed">Charoline AutoWrap adalah layanan Wrapping Sticker Mobil & Paint Protection Film (PPF) profesional yang telah dipercaya ribuan pelanggan sejak tahun 2012.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-6">Layanan</h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li>
+              <a href="#" data-target="detail-ppf" class="nav-link-trigger hover:text-white flex items-center gap-2 transition"><i class="fa-solid fa-circle-arrow-right text-gray-500"></i> Paint Protection Film (PPF)</a>
+            </li>
+            <li>
+              <a href="#" data-target="detail-wrapping" class="nav-link-trigger hover:text-white flex items-center gap-2 transition"><i class="fa-solid fa-circle-arrow-right text-gray-500"></i> Full Body Wrapping</a>
+            </li>
+            <li>
+              <a href="#" data-target="detail-decal" class="nav-link-trigger hover:text-white flex items-center gap-2 transition"><i class="fa-solid fa-circle-arrow-right text-gray-500"></i> Decal & Branding</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-6">Workshop</h4>
+          <ul class="space-y-4 text-sm text-gray-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot mt-1 text-gray-500"></i>
+              <a href="https://maps.google.com/?q=Pasar+Cipete+Blok+AKS+No.+62+Jakarta+Selatan" target="_blank" class="hover:text-white transition">Pasar Cipete Blok AKS No. 62<br />Jakarta Selatan</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/charolineautowrap" target="_blank" class="hover:text-white flex items-center gap-3 transition"> <i class="fa-brands fa-instagram text-gray-500"></i> Instagram </a>
+            </li>
+            <li>
+              <a href="#" data-target="privacy" class="nav-link-trigger hover:text-white flex items-center gap-3 transition"> <i class="fa-solid fa-shield-halved text-gray-500"></i> Privacy Policy </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto text-center text-sm text-gray-500">
+        <p>Copyright &copy; 2026 Charoline AutoWrap - Wrapping Sticker & PPF Professional Jakarta</p>
+      </div>
+    </footer>
+
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+      <a href="https://wa.me/6281234567890" target="_blank" class="bg-white text-gray-800 text-sm py-2 px-4 rounded shadow-lg relative animate-bounce hidden md:block hover:bg-gray-100 transition duration-300">
+        Tanya via WA? <strong>Klik di sini</strong>
+        <div class="absolute top-1/2 -right-2 transform -translate-y-1/2 w-0 h-0 border-y-[6px] border-y-transparent border-l-[8px] border-l-white"></div>
+      </a>
+      <a
+        href="https://wa.me/6281234567890"
+        target="_blank"
+        class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl shadow-green-900/20 hover:bg-green-600 hover:scale-110 transition-all duration-300"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const pages = document.querySelectorAll(".page-section");
+        const desktopLinks = document.querySelectorAll(".nav-link");
+        const mobileLinks = document.querySelectorAll(".nav-link-mobile");
+        const triggerLinks = document.querySelectorAll(".nav-link-trigger");
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Daftar Isi Toggle (Menyembunyikan atau memunculkan list saat icon diklik)
+        const tocToggles = document.querySelectorAll(".toc-toggle");
+        tocToggles.forEach((toggle) => {
+          toggle.addEventListener("click", () => {
+            const targetId = toggle.getAttribute("data-target");
+            const list = document.getElementById(targetId);
+
+            if (list.classList.contains("hidden")) {
+              list.classList.remove("hidden");
+              list.classList.add("grid");
+            } else {
+              list.classList.add("hidden");
+              list.classList.remove("grid");
+            }
+          });
+        });
+
+        // Change Page Function
+        function changePage(targetId) {
+          // Sembunyikan semua halaman
+          pages.forEach((page) => page.classList.add("hidden"));
+
+          // Tampilkan halaman yang dituju
+          document.getElementById("page-" + targetId).classList.remove("hidden");
+
+          // Tentukan menu mana yang aktif
+          let activeNav = targetId;
+          if (targetId.startsWith("detail-")) {
+            activeNav = "layanan";
+          }
+
+          desktopLinks.forEach((l) => {
+            l.classList.remove("text-brand-red");
+            l.classList.add("hover:text-brand-red");
+            if (l.getAttribute("data-target") === activeNav) {
+              l.classList.add("text-brand-red");
+              l.classList.remove("hover:text-brand-red");
+            }
+          });
+
+          mobileLinks.forEach((l) => {
+            l.classList.remove("text-brand-red");
+            l.classList.add("text-white");
+            if (l.getAttribute("data-target") === activeNav) {
+              l.classList.add("text-brand-red");
+              l.classList.remove("text-white");
+            }
+          });
+
+          mobileMenu.classList.add("hidden");
+          window.scrollTo(0, 0);
+        }
+
+        // Navigasi Link Event Listeners
+        const allLinks = [...desktopLinks, ...mobileLinks, ...triggerLinks];
+        allLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("data-target");
+            if (targetId) {
+              changePage(targetId);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
